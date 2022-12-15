@@ -4,7 +4,7 @@
 #### **BIG DATA LAB**
 ## Bishwajit Kumar Poddar
 
-**Msc MI - 211110**
+**Msc Machine Inetelligence**
 </center>
 
 _Task performed_
