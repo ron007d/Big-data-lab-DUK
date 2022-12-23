@@ -531,7 +531,7 @@ export HADOOP_HDFS_HOME=$HADOOP_HOME
 export YARN_HOME=$HADOOP_HOME
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-export HADOOP_OPTS"-Djava.library.path=$HADOOP_HOME/lib/nativ"
+export HADOOP_OPTS="$HADOOP_OPTS"-Djava.library.path="$HADOOP_HOME/lib/native"
 ```
 ```bash
 $ source ~/.bashrc
@@ -658,6 +658,11 @@ hadoop@ron-VirtualBox:~$ jps
 3641 DataNode
 3453 NameNode
 4287 NodeManager
+```
+
+- if you want to start operations in pig run `mr-jobhistory-daemon.sh` using this
+```bash
+mr-jobhistory-daemon.sh start historyserver
 ```
 <br>
 <br>
@@ -1913,7 +1918,11 @@ To install mongodb we will use docker container system.
 	```
 	- if you get `grunt >` then its working for you
 	- use `quit` to get out of grunt runtime
-
+- Also for smooth operations in pig in you need to run JOB history server from hadoop
+	- for which got to the directory `/home/<user_name>/hadoop/sbin/` and run the bellow command
+	```bash
+	mr-jobhistory-daemon.sh start historyserver
+	```
 # Basic queries on Pig
 
 1. ## Fs
