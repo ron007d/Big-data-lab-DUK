@@ -927,25 +927,26 @@ To install mongodb we will use docker container system.
 
 	services:
 
-	mongo:
-		image: mongo
-		#restart: None
-		ports:
-		- 27017:27017
-		environment:
-		MONGO_INITDB_ROOT_USERNAME: root
-		MONGO_INITDB_ROOT_PASSWORD: root
+	  mongo:
+	    image: mongo
+	    #restart: None
+	    ports:
+	      - 27017:27017
+	    environment:
+	      MONGO_INITDB_ROOT_USERNAME: root
+	      MONGO_INITDB_ROOT_PASSWORD: root
 
-	mongo-express:
-		image: mongo-express
-		#restart: None
-		ports:
-		- 8081:8081
-		environment:
-		ME_CONFIG_MONGODB_ADMINUSERNAME: root
-		ME_CONFIG_MONGODB_ADMINPASSWORD: root
-		ME_CONFIG_MONGODB_URL: mongodb://root:root@mongo:27017/
+	  mongo-express:
+	    image: mongo-express
+	    #restart: None
+	    ports:
+	      - 8081:8081
+	    environment:
+	      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+	      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+	      ME_CONFIG_MONGODB_URL: mongodb://root:root@mongo:27017/
 	```
+	
 	- set a name
 	
 	![stack name](./screen%20shots/Screenshot%202022-12-12%20at%2011-51-20%20Portainer%20local.png)
@@ -971,6 +972,15 @@ To install mongodb we will use docker container system.
 	> Its like this for me, might not be same for you. As I have created a `youtube_comments` manually
 
 	### *Congratulation your mongodb is inatlled and running*
+	> TO start the mongo you need to go to the bash of the mongo and run the bellow code in terminal
+	```bash
+	mongosh -u root -p root
+	```
+	or you can also run
+	```bash
+	mongosh -u root
+	```
+	then it will ask for password and its root. the password can be manually changed in the YML file above
 <br>
 <br>
 
@@ -1869,8 +1879,8 @@ To install mongodb we will use docker container system.
 
 # Pig Installation
 
-- To install pig in system first download the pig tar
-	```js
+- # To install pig in system first download the pig tar
+	```url
 	https://dlcdn.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
 	```
 - This URL redirects to the latest one currently available at time of documentation.
