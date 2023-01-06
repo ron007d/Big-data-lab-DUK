@@ -1883,17 +1883,17 @@ To install mongodb we will use docker container system.
 	https://dlcdn.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
 	```
 
-- This URL redirects to the latest one currently available at time of documentation.
+2. This URL redirects to the latest one currently available at time of documentation.
 
-- use this command to download it in ubuntu
+3. use this command to download it in ubuntu
 	```bash
 	$ wget https://dlcdn.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
 	```
-- then un-tar the tar file using this command
+4. then un-tar the tar file using this command
 	```bash
 	$ tar -xvf pig-0.17.0.tar.gz
 	```
-- add the path for `.bashrc`
+5. add the path for `.bashrc`
 	```c
 	export PIG_HOME=/home/hadoop/pig
 	export PATH=$PATH:/home/hadoop/pig/bin
@@ -1901,7 +1901,7 @@ To install mongodb we will use docker container system.
 	```
 	> for my use case the pig file is in `home/hadoop`. It might be different.
 
-- run pig using `pig` in terminal
+6. run pig using `pig` in terminal
 	```bash
 	$ pig
 	```
