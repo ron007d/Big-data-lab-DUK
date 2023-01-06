@@ -1,11 +1,11 @@
-<center>
+
 
 # Assignment 2
 #### **BIG DATA LAB**
 ## Bishwajit Kumar Poddar
 
 **Msc Machine Inetelligence**
-</center>
+
 
 _Task performed_
 
