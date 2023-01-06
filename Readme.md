@@ -1870,8 +1870,7 @@ To install mongodb we will use docker container system.
 # Pig Installation
 
 - To install pig in system first download the pig tar
-	---
-```console
+```url
 https://dlcdn.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
 ```
 - This URL redirects to the latest one currently available at time of documentation.
